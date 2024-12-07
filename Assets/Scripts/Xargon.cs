@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Xargon : MonoBehaviour
@@ -10,7 +11,9 @@ public class Xargon : MonoBehaviour
     [SerializeField]
     private float _speed = 20f;
     private float _horizontalInput;
-
+    public GameObject pickupText;
+    
+    
 
     private void FixedUpdate()
     {
@@ -19,6 +22,7 @@ public class Xargon : MonoBehaviour
         _xargonBody.velocity = new Vector2(horizontalMovement, _xargonBody.velocity.y);
     }
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,4 +34,6 @@ public class Xargon : MonoBehaviour
     {
         
     }
+
+    
 }

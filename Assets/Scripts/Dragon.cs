@@ -25,7 +25,7 @@ public class Dragon : MonoBehaviour
             SkinFade(true);
             
         }
-        else
+        else 
         {
             SkinFade(false);
             
@@ -40,19 +40,28 @@ public class Dragon : MonoBehaviour
         
         if (inside)
         {
-            float fade = Mathf.MoveTowards(1, 0, Time.deltaTime/10);
-            dragonColor -= fade;
-            dragonSprite.color += new Color(0, 0, 0, dragonColor);
-            if(dragonColor <= 0.1){dragon.SetActive(false);}
+            if (dragon.activeSelf == true)
+            {
+                float fade = Mathf.MoveTowards(1, 0, Time.deltaTime / 3);
+                dragonColor += fade;
+                dragonSprite.color -= new Color(0, 0, 0, dragonColor);
+                if (dragonColor <= 0.1)
+                {
+                    dragon.SetActive(false);
+                }
+            }
 
-            
         }
         else
         {
-            dragon.SetActive(true);
-            float fade = Mathf.MoveTowards(0, 1, Time.deltaTime/10);
-            dragonColor += fade;
-            dragonSprite.color += new Color(0, 0, 0, dragonColor);
+            if (dragonSprite.color.a < 1)
+            {
+                dragon.SetActive(true);
+                float fade = Mathf.MoveTowards(0, 1, Time.deltaTime / 3);
+                dragonColor += fade;
+                dragonSprite.color += new Color(0, 0, 0, dragonColor);
+            }
+
         }
         
     }

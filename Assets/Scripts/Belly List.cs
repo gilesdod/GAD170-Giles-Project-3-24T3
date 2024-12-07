@@ -9,6 +9,7 @@ public class BellyList : MonoBehaviour
     public GameObject Gold;
     public GameObject Food;
     public GameObject Arrows;
+    public GameObject pickupText;
     
     //FillBelly will instantiate items at the location of each box listed in the BoxCollider2D array "bellyPos."
     void FillBelly()
@@ -36,6 +37,13 @@ public class BellyList : MonoBehaviour
                 }
             }
         }
+
+        for (int i = 0; i < bellyPos.Length; i++)
+        {
+            bellyPos[i].gameObject.SetActive(false);
+        }
+        
+        pickupText.SetActive(false);
     }
     
     // Start is called before the first frame update

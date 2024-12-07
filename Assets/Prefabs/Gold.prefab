@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7836775294626838697}
   - component: {fileID: 6021025166969108800}
-  - component: {fileID: 9126181874190298677}
-  - component: {fileID: 5365349393924325794}
+  - component: {fileID: 167882444906788003}
+  - component: {fileID: 7055833950998217555}
+  - component: {fileID: -3500911596028829438}
   m_Layer: 0
   m_Name: Gold
   m_TagString: Untagged
@@ -86,8 +87,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &9126181874190298677
-BoxCollider2D:
+--- !u!114 &167882444906788003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328008340161621669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4054865080432b44aacf58599f09bf17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xargon: {fileID: 0}
+  weight: 5
+  wealth: 100
+  birds: 0
+--- !u!58 &7055833950998217555
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -115,23 +132,13 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!50 &5365349393924325794
+  m_Radius: 0.5
+--- !u!50 &-3500911596028829438
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
